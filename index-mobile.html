@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stillpoint Art Studio — Contemplative Monochrome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body{margin:0;background:#fff;color:#111;font-family:'Poppins',sans-serif;font-size:18px;line-height:1.65;}
+        a{color:#000;text-decoration:none;}
+       .header{
+    padding:1rem 1.2rem 0.6rem;   /* reduced bottom padding = tiny gap */
+    border-bottom:1px solid #eee;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+.logo-link{
+    display:flex;
+    align-items:center;
+    font-weight:600;
+    font-size:1.1em;
+    white-space:nowrap;
+    letter-spacing:-0.45px;
+    text-decoration:none;
+}
+.logo-img{
+    height:36px;
+    width:auto;
+    margin-right:9px;
+    border:none !important;
+    object-fit:contain;
+}
+.nav{
+    display:flex;
+    flex-direction:column;     /* stacks them vertically */
+    text-align:right;
+    gap:0.35rem;               /* tiny, elegant spacing between links */
+    margin-top:0;         /* tiny gap from the logo line */
+}
+.nav a{
+    font-weight:500;
+    font-size:0.98em;
+    padding:0.2rem 0;
+}
+        .container{padding:2rem 1.2rem 4rem;text-align:center;}
+        h1{font-size:2.4em;font-weight:600;margin:1.5rem 0 .5rem;letter-spacing:-0.5px;line-height: 1.4;}
+        h2{font-size:1.15em;font-weight:300;opacity:0.8;margin:0;}
+        img.hero{width:100%;height:auto;display:block;margin:0;}
+        .tagline{font-size:1.1em;margin:2rem 0 3rem;opacity:0.9;}
+        .footer{text-align:center;padding:2rem 1rem;border-top:1px solid #eee;font-size:0.9em;color:#888;}
+        .footer img{height:25px;margin-right:8px;vertical-align:middle;}
+                .footer a {
+    color: #888; /* Set links to the same light gray */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-email {
+    color: #888;
+}
+        .desktop{display:block;margin:4rem auto 0;color:#666;font-size:0.9em;}
+    </style>
+
+    <!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1952817');
+</script>
+<!-- End MailerLite Universal -->
+ 
+</head>
+<body>
+
+<header class="header">
+    <a href="index-mobile.html" class="logo-link">
+        <img src="./photos/logo_small_40h.png" alt="Logo" class="logo-img">
+        <span>Stillpoint Art</span>
+    </a>
+
+    <nav class="nav">
+        <a href="studio-mobile.html">Studio</a>
+        <a href="gallery-mobile.html">Gallery</a>
+        <a href="https://stillpointart.bigcartel.com" target="_blank">Shop</a>
+    </nav>
+</header>
+
+<img src="photos/hero-image.jpg" alt="Striking Monochrome Landscape" class="hero">
+
+<div class="container">
+    <h1>Stillpoint Art Studio</h1>
+    <h2>Finding the vast stillness within the frame</h2>
+
+    <p style="margin-top:4rem;">
+        <a href="studio-mobile.html" style="font-size:1.4em;font-weight:500;">Enter →</a>
+    </p>
+
+    <p class="desktop"><a href="index.html">Desktop version</a></p>
+</div>
+
+<footer class="footer">
+    <img src="./photos/logo_small_40h.png" alt="Stillpoint Logo">
+    © 2025 Stillpoint Art • <a href="privacyandlegal-mobile.html">Privacy & Legal</a> • 
+    <a href="mailto:felix@stillpointart.uk">felix@stillpointart.uk</a> • 
+    <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'kWFltZ', true)">Newsletter</a>
+</footer>
+
+</body>
+</html>

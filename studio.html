@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+// Mobile redirect – works on every iPhone, even when it lies about screen.width
+if (sessionStorage.getItem('mobileDone')) {
+    // already redirected this session → do nothing
+} else if (/iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+           /iPhone|iPad|iPod|Android/i.test(navigator.platform) ||
+           (screen.width <= 812 && screen.height <= 896)) {
+
+    sessionStorage.setItem('mobileDone', '1');
+
+    var newPage = location.pathname.toLowerCase().includes('studio')
+                  ? 'studio-mobile.html'
+                  : 'index-mobile.html';
+
+    location.replace(location.origin + '/' + newPage);
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio — Stillpoint Art Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+    /* ---------------------------------- */
+    /* NEW STRUCTURE FOR ALIGNMENT FIX    */
+    /* ---------------------------------- */
+
+    /* Container for the artist sections to manage their spacing */
+    .artist-section-container {
+        margin-top: 60px; /* Space between the intro and the first artist */
+    }
+
+    /* Styles for each individual Artist/Portrait Row (Flex container) */
+    .artist-section {
+        display: flex;
+        gap: 60px;
+        margin-bottom: 60px; /* Space between Felix and Lilly sections */
+    }
+
+    .artist-section:last-of-type {
+        margin-bottom: 0; /* Remove margin after the last artist section */
+    }
+
+    .artist-text-column {
+        flex: 1;
+        max-width: 650px;
+    }
+    
+    .artist-image-column {
+        flex: 0 0 350px; /* Fixed width for portrait column */
+        align-self: flex-start; 
+        margin-top: 20px;
+    }
+    
+    .artist-image-column img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: grayscale(100%);
+        aspect-ratio: 4 / 5; 
+        object-fit: cover; 
+    }
+    
+    /* ---------------------------------- */
+    /* INTRO LAYOUT FIX (For the new Visual) */
+    /* ---------------------------------- */
+    
+    /* FIX 1: Override external CSS padding-top for extra space below the fixed header */
+    .container {
+        padding-top: 120px; /* Increased from 80px in styles.css to ensure clearance and buffer */
+    }
+
+    .intro-layout {
+        display: flex;
+        gap: 60px;
+        margin-bottom: 40px;
+        align-items: flex-start; /* Aligns content to the top */
+    }
+    
+    .intro-section {
+        flex: 1;
+        max-width: 650px; 
+    }
+    
+    .intro-visual {
+        flex: 0 0 350px; /* Fixed width for the visual column */
+        align-self: flex-start; 
+    }
+
+    /* FIX 2: Add margin-top to the image to push it down and align with the first paragraph/title */
+    .intro-visual-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: grayscale(100%);
+        aspect-ratio: 4 / 5; /* Matches the portrait aspect ratio */
+        object-fit: cover; 
+        margin-top: 85px; /* Pushes the image down slightly */
+    }
+    
+
+    /* ---------------------------------- */
+    /* Typography Styling (Justification) */
+    /* ---------------------------------- */
+
+    .text-column h3, .artist-text-column h3, .intro-section h3 {
+        font-size: 1.8rem;
+        margin-top: 40px;
+        margin-bottom: 25px; 
+        border-bottom: 1px solid var(--color-grey-mid);
+        padding-bottom: 5px;
+        font-family: var(--font-serif); 
+    }
+    
+    /* FIX 3: Push the main title down to align with the image top */
+    .container h3:first-of-type {
+        margin-top: 0px; /* Matches the margin-top of the image */
+    }
+    
+    .intro-section p, .artist-text-column p {
+        margin-bottom: 25px;
+        font-size: 1.05rem;
+        max-width: 600px; 
+        text-align: justify; 
+    }
+
+    .text-column h4 {
+        font-size: 1.2rem;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-style: italic;
+    }
+    
+    .cv-list {
+        list-style: none;
+        padding-left: 0;
+        font-size: 0.9rem;
+        line-height: 1.8;
+        margin-top: 15px;
+        text-align: left; 
+    }
+    .principles-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0 40px 0;
+        font-family: var(--font-sans);
+        max-width: 500px; 
+        margin-left: 15px; 
+        text-align: left; 
+    }
+    .principles-table td {
+        padding: 10px 0;
+        vertical-align: top;
+        border-bottom: 1px solid var(--color-grey-light);
+    }
+    .principles-table td:first-child {
+        width: 150px; 
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-style: italic;
+    }
+
+    /* ---------------------------------- */
+    /* Responsive Adjustments             */
+    /* ---------------------------------- */
+
+    @media (max-width: 900px) {
+        .intro-layout {
+            flex-direction: column;
+        }
+        .intro-section, .intro-visual {
+            max-width: 100%;
+            width: 100%;
+            flex-basis: auto;
+        }
+        .intro-visual {
+            order: -1;
+            margin-bottom: 20px;
+        }
+        .principles-table {
+            max-width: 100%;
+            margin-left: 0;
+        }
+        /* Adjusting container padding for smaller screens if needed */
+        .container {
+            padding-top: 40px; /* Slightly less needed on smaller screens, adjust as necessary */
+        }
+    }
+</style>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1952817');
+</script>
+<!-- End MailerLite Universal -->
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="./photos/logo_small_40h.png" alt="Stillpoint Art Studio Logo" class="logo-img">
+                <span class="logo-text">Stillpoint Art</span>
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="studio.html">Studio</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="https://stillpointart.bigcartel.com" target="_blank">Shop</a> 
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <div class="intro-layout">
+            <div class="intro-section">
+                <h3>A Contemplative Cartography</h3>
+                
+                <p>The photographic works presented here are not landscapes or surrounding environments in the conventional sense. They are objects of contemplation, based on a practice of direct perception (Miksang) that establishes immediate, unconditioned connections with the world around us.</p>
+
+                <p>Every image seeks to hold the first moment of seeing, before the conceptual mind intervenes with memory or expectation. This approach aligns with Zen-inspired aesthetic principles:</p>
+
+                <table class="principles-table">
+                    <tr>
+                        <td>Yūgen</td>
+                        <td>The pursuit of profound, subtle, and hidden depths of beauty, best expressed in the tonal gradation of black-and-white imagery.</td>
+                    </tr>
+                    <tr>
+                        <td>Wabi-Sabi</td>
+                        <td>A gentle acceptance of change and impermanence, finding beauty in imperfection, and acknowledging the effects of time, age, and experience.</td>
+                    </tr>
+                </table>
+
+                <p style="margin-top: 30px;">These photographs invite you to slow down, to gaze and relax the habitual mind. They are taken as echoes of stillness, resisting the need for explanation.</p>
+            </div>
+            
+            <div class="intro-visual">
+                <img src="./photos/suchness.jpg" alt="Seeing suchness" class="intro-visual-image">
+            </div>
+            
+        </div> <div class="artist-section-container">
+
+            <div class="artist-section">
+                <div class="artist-text-column">
+                    <h3>Felix Zajitschek</h3>
+
+                    <p>As a scientist with a <strong>PhD in Evolutionary Ecology</strong>, my work has always been concerned with structure, time, and the ceaseless dynamic flow of life and death. This scientific view found its mirror in the philosophy of Soto Zen and the direct perception methodology of Miksang (The Good Eye).</p>
+
+                    <p>For decades, I have understood the landscapes around me as teachers and friends: from the Bavarian riverbeds shaped by the last ice age, the majestic European alps, and the foothills of the Pyrenees, to the forests of Scandinavia, and the primal light of Tasmania. Now settled amid the varied landscapes of Formby, with its dunes, the Irish Sea, and the pinewoods, the photograph is a glimpse of my unconditioned reality, rather than an account of place alone.</p>
+                    
+                    <p>Prints in monochrome remove the distraction of colour and allow the eye to meet and focus on the fundamentals—light, form, silence, and interconnectedness.</p>
+                    
+                    <h4 style="margin-top: 40px;">Selected Context</h4>
+                    <ul class="cv-list">
+                        <li>My background as a scientist involved living and working in <strong>France, Sweden, the USA, Australia, and the UK</strong>, shaping a unique, global perspective on natural structure and scale.</li>
+                        <li>My photographic practice integrates Soto Zen philosophy, catalyzed by the vast coastal environments of <strong>Tasmania and New South Wales</strong>, as well as the unique character of the <strong>Formby and Sefton</strong> coastline.</li>
+                        <li>My current output is focused on <strong>limited edition fine art prints</strong>, ensuring the unique nature and meticulous quality of each finished photograph.</li>
+                    </ul>
+                </div>
+                
+                <div class="artist-image-column">
+                    <img src="./photos/felix-portrait.jpg" alt="Portrait of the Artist, Felix Zajitschek"> 
+                </div>
+            </div>
+
+            <div class="artist-section">
+                <div class="artist-text-column">
+                    <h3>Lilly Skye Zajitschek</h3>
+
+                    <p>Stillpoint Art Studio is evolving through a collaboration with my daughter, <strong>Lilly Skye</strong>. Her work explores the relationship between <strong>structure, movement, and the environment</strong>. Trained as a ballet dancer and athlete, she approaches the landscape not just as a visual space, but as a stage for physical discipline and dynamic presence, offering a counterpoint to the contemplative foundation of the studio.</p>
+
+                    <p>Lilly Skye is a 15-year-old artist and GCSE Photography student. Born in France and holding German nationality, her unique perspective is shaped by living and studying in Sweden, the US, Australia, and the UK. Her photographs often capture the interplay of light and form found in coastal environments, mirroring the discipline and tension inherent in her primary pursuits of neo-classical ballet.</p>
+
+                </div>
+                
+                <div class="artist-image-column">
+                    <img src="./photos/lilly-portrait.jpg" alt="Portrait of Lilly Skye">
+                </div>
+            </div>
+            
+        </div> </main>
+
+        <p class="desktop" style="margin-top: 60px;"><a href="index-mobile.html">Mobile version</a></p>
+    
+    <footer class="footer">
+        <img src="./photos/logo_small_40h.png" alt="Stillpoint Logo" style="height:25px; margin-right: 10px; vertical-align: middle;">
+        © 2025 Stillpoint Art Studio &nbsp; • &nbsp; <a href="privacyandlegal.html">Privacy & Legal</a> &nbsp; • &nbsp; 
+        Enquiries → <a href="mailto:felix@stillpointart.uk">felix@stillpointart.uk</a> &nbsp; • &nbsp; 
+        <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'kWFltZ', true)"> → Newsletter</a>
+    </footer>
+</body>
+</html>

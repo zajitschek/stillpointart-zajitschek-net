@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+// Mobile redirect – works on every iPhone, even when it lies about screen.width
+if (sessionStorage.getItem('mobileDone')) {
+    // already redirected this session → do nothing
+} else if (/iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+           /iPhone|iPad|iPod|Android/i.test(navigator.platform) ||
+           (screen.width <= 812 && screen.height <= 896)) {
+
+    sessionStorage.setItem('mobileDone', '1');
+
+    var newPage = location.pathname.toLowerCase().includes('studio')
+                  ? 'studio-mobile.html'
+                  : 'index-mobile.html';
+
+    location.replace(location.origin + '/' + newPage);
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stillpoint Art Studio — Contemplative Monochrome.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Home-specific styles */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* 80% of viewport height */
+            margin-top: -80px;  /* Pull up to cover space left by header padding */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the area without distorting */
+            filter: grayscale(100%); /* Force B&W for consistency */
+        }
+        .hero-text {
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            /* Shift down by 30% of its own height to move it visually away from the header */
+            transform: translate(-50%, -30%);
+            color: var(--color-white);
+            background-color: rgba(17, 17, 17, 0.5); /* Subtle dark overlay for readability */
+            padding: 20px 40px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            font-family: var(--font-serif);
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .hero { height: 70vh; }
+        }
+    </style>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1952817');
+</script>
+<!-- End MailerLite Universal -->
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+            <img src="./photos/logo_small_40h.png" alt="Stillpoint Art Studio Logo" class="logo-img">
+            <span class="logo-text">Stillpoint Art</span>
+        </a>
+            </div>
+        <nav class="nav">
+            <a href="studio.html">Studio</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="https://stillpointart.bigcartel.com" target="_blank">Shop</a>
+    </header>
+
+    <main>
+        <div class="hero">
+            <img src="./photos/hero-image.jpg" alt="Striking Monochrome Landscape" class="hero-image">
+            <div class="hero-text">
+                <h1>Stillpoint Art Studio</h1>
+                <p>Finding the vast stillness within the frame</p>
+            </div>
+        </div>
+    </main>
+
+    <p style="margin-top:1rem; margin-bottom: 1.5rem; text-align: center;">
+        <a href="studio.html" style="font-size:1.6em;font-weight:500;">Enter</a>
+    </p>
+
+    <p class="desktop"><a href="index-mobile.html">Mobile version</a></p>
+    
+    <footer class="footer">
+        <img src="./photos/logo_small_40h.png" alt="Stillpoint Logo" style="height:25px; margin-right: 10px; vertical-align: middle;">
+        © 2025 Stillpoint Art Studio &nbsp; • &nbsp; <a href="privacyandlegal.html">Privacy & Legal</a> &nbsp; • &nbsp; 
+        Enquiries → <a href="mailto:felix@stillpointart.uk">felix@stillpointart.uk</a> &nbsp; • &nbsp; 
+        <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'kWFltZ', true)"> → Newsletter</a>
+    </footer>
+</body>
+</html>

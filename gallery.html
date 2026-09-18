@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Stillpoint Art Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Gallery-specific styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            aspect-ratio: 1 / 1; /* Force square aspect ratio */
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(100%);
+            transition: transform 0.5s;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05); /* Subtle zoom on hover */
+        }
+
+        /* Responsive Adjustments for Grid */
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: 1fr; /* Stack on small screens */
+            }
+        }
+    </style>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1952817');
+</script>
+<!-- End MailerLite Universal -->
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="./photos/logo_small_40h.png" alt="Stillpoint Art Studio Logo" class="logo-img">
+                <span class="logo-text">Stillpoint Art</span>
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="studio.html">Studio</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="https://stillpointart.bigcartel.com" target="_blank">Shop</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Selected Works</h2>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="./photos/print-01.jpg" alt="Stillpoint Print 1" loading="lazy"></div>
+            <div class="gallery-item"><img src="./photos/print-02.jpg" alt="Stillpoint Print 2" loading="lazy"></div>
+            <div class="gallery-item"><img src="./photos/print-03.jpg" alt="Stillpoint Print 3" loading="lazy"></div>
+            <div class="gallery-item"><img src="./photos/print-04.jpg" alt="Stillpoint Print 4" loading="lazy"></div>
+            <div class="gallery-item"><img src="./photos/print-05.jpg" alt="Stillpoint Print 5" loading="lazy"></div>
+            <div class="gallery-item"><img src="./photos/print-06.jpg" alt="Stillpoint Print 6" loading="lazy"></div>
+            </div>
+    </main>
+    
+    <footer class="footer">
+        <img src="./photos/logo_small_40h.png" alt="Stillpoint Logo" style="height:25px; margin-right: 10px; vertical-align: middle;">
+        © 2025 Stillpoint Art Studio &nbsp; • &nbsp; <a href="privacyandlegal.html">Privacy & Legal</a> &nbsp; • &nbsp; 
+        Enquiries → <a href="mailto:felix@stillpointart.uk">felix@stillpointart.uk</a> &nbsp; • &nbsp; 
+        <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'kWFltZ', true)"> → Newsletter</a>
+    </footer>
+    </body>
+</html>

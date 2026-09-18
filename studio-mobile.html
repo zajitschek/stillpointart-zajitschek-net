@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Studio — Stillpoint Art Studio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{margin:0;background:#fff;color:#111;font-family:'Poppins',sans-serif;line-height:1.7;font-size:18px;}
+
+        a{color:#000;text-decoration:none;}
+
+.header{
+
+    padding:1rem 1.2rem 0.6rem;   /* reduced bottom padding = tiny gap */
+
+    border-bottom:1px solid #eee;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:space-between;
+
+    align-items:flex-start !important;
+
+}
+
+.logo-link{
+
+    display:flex;
+
+    align-items:center;
+
+    font-weight:600;
+
+    font-size:1.1em;
+
+    white-space:nowrap;
+
+    letter-spacing:-0.45px;
+
+    text-decoration:none;
+
+    /* FORCE PINNING TO THE TOP */
+    align-self: flex-start !important;
+    margin-bottom: auto !important;
+    height: fit-content !important;
+}
+
+/* --- LOGO TEXT (SPAN): Internal Adjustment (Lifting the Text) --- */
+.logo-link span {
+    display: inline-block !important;
+    /* Adjust this negative margin until the text is perfectly level with the image. 
+       -6px to -8px is typically needed for 36px image height. */
+    margin-top: -39px !important; 
+}
+
+.logo-img{
+
+    height:36px;
+
+    width:auto;
+
+    margin-right:9px;
+
+    border:none !important;
+
+    object-fit:contain;
+
+    vertical-align: middle !important;
+
+    /* Fine-tuning the image position against the text */
+    margin-top: 0 !important;
+}
+
+.nav{
+
+    display:flex;
+
+    flex-direction:column;     /* stacks them vertically */
+
+    text-align:right;
+
+    gap:0.35rem;               /* tiny, elegant spacing between links */
+
+    margin-top:0;         /* tiny gap from the logo line */
+
+}
+
+.nav a{
+
+    font-weight:500;
+
+    font-size:0.98em;
+
+    padding:0.2rem 0;
+
+}
+
+.justified-text {
+    text-align: justify;
+    hyphens: auto; 
+}
+
+
+        .container{padding:2rem 1.2rem 4rem;}
+
+        h1,h2,h3{text-align:center;}
+
+        h1{font-size:2.0em;font-weight:600;margin:0.5rem 0 0;letter-spacing:-0.5px;line-height: 1.3;}
+
+        h2{font-size:1.3em;font-weight:300;margin-bottom:2.5rem;opacity:0.85;}
+
+        h3{font-size:1.35em;font-weight:500;margin:3rem 0 1rem;}
+
+        p{max-width:42em;margin:1.4rem auto;}
+
+        img{width:100%;height:auto;display:block;margin:2.5rem auto;border:1px solid #ddd;}
+
+        .principle{background:#f8f8f8;padding:1.8rem;margin:3rem 0;border-radius:8px;}
+
+        .principle strong{display:block;font-size:1.4em;font-weight:600;margin-bottom:0.6rem;}
+
+        .footer{text-align:center;padding:2rem 1rem;border-top:1px solid #eee;font-size:0.9em;color:#888;}
+
+        .footer img{width:auto !important;height:25px;margin-right:8px;vertical-align:middle;border:none !important;display:inline !important;filter: grayscale(20%);}
+        
+        .footer a {
+    color: #888; /* Set links to the same light gray */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-email {
+    color: #888;
+}
+
+.footer a:hover {
+    color: #000;
+}
+
+        .desktop{text-align:center;margin:5rem 0 2rem;font-size:0.9em;color:#666;}
+
+    </style>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1952817');
+</script>
+<!-- End MailerLite Universal -->
+ 
+</head>
+
+<body>
+
+
+
+<header class="header">
+
+    <a href="index-mobile.html" class="logo-link">
+
+        <img src="./photos/logo_small_40h.png" alt="Logo" class="logo-img">
+
+        <span>Stillpoint Art</span>
+
+    </a>
+
+
+
+    <nav class="nav">
+
+        <a href="studio-mobile.html">Studio</a>
+
+        <a href="gallery-mobile.html">Gallery</a>
+
+        <a href="https://stillpointart.bigcartel.com" target="_blank">Shop</a>
+
+    </nav>
+
+</header>
+
+
+
+<div class="container">
+
+    <h1>Stillpoint Art Studio</h1>
+
+    <h2>A Contemplative Cartography</h2>
+
+
+
+    <p class="justified-text">The photographic works presented here are not landscapes or surrounding environments in the conventional sense. They are objects of contemplation, based on a practice of direct perception (Miksang) that establishes immediate, unconditioned connections with the world around us.</p>
+
+
+
+    <p class="justified-text">Every image seeks to hold the first moment of seeing, before the conceptual mind intervenes with memory or expectation.</p>
+
+    <p class="justified-text">The stillpoint is that momentary resting place of perception at the heart of constant change. This stillness resonates with two guiding Japanese aesthetics:</p>
+
+
+
+    <div class="principle">
+
+        <strong>Yūgen</strong>
+
+        The pursuit of profound, subtle, and hidden depths of beauty, best expressed in the tonal gradation of black-and-white imagery.
+
+    </div>
+
+
+
+    <div class="principle">
+
+        <strong>Wabi-Sabi</strong>
+
+        A gentle acceptance of change and impermanence, finding beauty in imperfection, and acknowledging the effects of time, age, and experience.
+
+    </div>
+
+
+
+    <p class="justified-text">These photographs invite you to slow down, to gaze and relax the habitual mind. They are taken as echoes of stillness, resisting the need for explanation.</p>
+
+
+
+    <h3>Felix Zajitschek</h3>
+
+    <img src="./photos/felix-portrait.jpg" alt="Portrait of the Artist, Felix Zajitschek">
+
+
+
+    <p class="justified-text">As a scientist with a <strong>PhD in Evolutionary Ecology</strong>, my work has always been concerned with structure, time, and the ceaseless dynamic flow of life and death. This scientific view found its mirror in the philosophy of Soto Zen and the direct perception methodology of Miksang (The Good Eye).</p>
+
+
+
+    <p class="justified-text">For decades, I have understood the landscapes around me as teachers and friends: from the Bavarian riverbeds shaped by the last ice age, the majestic European alps, and the foothills of the Pyrenees, to the forests of Scandinavia, and the primal light of Tasmania. Now settled amid the varied landscapes of Formby, with its dunes, the Irish Sea, and the pinewoods, the photograph is a glimpse of my unconditioned reality, rather than an account of place alone.</p>
+
+
+    <p class="justified-text">Prints in monochrome remove the distraction of colour and allow the eye to meet and focus on the fundamentals—light, form, silence, and interconnectedness.</p>
+
+   
+
+    <h4 style="margin-top: 40px; text-align:center;">Selected Context</h4>
+
+    <ul style="max-width:42em; margin:2rem auto; padding-left:1.4rem; line-height:1.8;">
+
+        <li>My background as a scientist involved living and working in <strong>France, Sweden, the USA, Australia, and the UK</strong>, shaping a unique, global perspective on natural structure and scale.</li>
+
+        <li>My photographic practice integrates Soto Zen philosophy, catalyzed by the vast coastal environments of <strong>Tasmania and New South Wales</strong>, as well as the unique character of the <strong>Formby and Sefton</strong> coastline.</li>
+
+        <li>My current output is focused on <strong>limited edition fine art prints</strong>, ensuring the unique nature and meticulous quality of each finished photograph.</li>
+
+    </ul>
+
+
+
+    <h3>Lilly Skye Zajitschek</h3>
+
+    <img src="./photos/lilly-portrait.jpg" alt="Portrait of Lilly Skye">
+
+
+
+    <p class="justified-text">Stillpoint Art Studio is evolving through a collaboration with my daughter, Lilly Skye. Her work explores the relationship between structure, movement, and the environment. Trained as a ballet dancer and athlete, she approaches the landscape not just as a visual space, but as a stage for physical discipline and dynamic presence.</p>
+
+
+
+    <p class="justified-text">Lilly Skye is a 15-year-old artist and GCSE Photography student. Her photographs often capture the interplay of light and form found in coastal environments, mirroring the discipline and tension inherent in her primary pursuits of neo-classical ballet.</p>
+
+
+
+    <p style="margin-top:4rem;">
+
+        <a href="gallery-mobile.html" style="font-size:1.4em;font-weight:500;">Visit the Gallery →</a>
+
+    </p>
+
+</div>
+
+    <div class="desktop"><a href="studio.html">Desktop version</a> • <a href="index-mobile.html">Home</a></div>
+
+
+
+<footer class="footer">
+    <img src="./photos/logo_small_40h.png" alt="Stillpoint Logo" style="margin: 0 !important; height: 25px; width: auto; display: inline-block;">
+    © 2025 Stillpoint Art • <a href="privacyandlegal-mobile.html">Privacy & Legal</a> • 
+    <a href="mailto:felix@stillpointart.uk">felix@stillpointart.uk</a> • 
+    <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'kWFltZ', true)">Newsletter</a>
+</footer>
+
+
+</body>
+
+</html>

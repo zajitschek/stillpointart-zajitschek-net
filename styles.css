@@ -1,0 +1,184 @@
+/* ========================================= */
+/* 1. Global Reset and Typography */
+/* ========================================= */
+:root {
+    --color-black: #111;
+    --color-white: #fff;
+    --color-grey-light: #f4f4f4;
+    --color-grey-mid: #aaa;
+    --color-grey-dark: #666;
+    --font-serif: 'Poppins', serif;
+    --font-sans: 'Poppins', Arial, sans-serif;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+a {
+    color: var(--color-black);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-grey-mid);
+}
+
+.footer a {
+    color: var(--color-grey-mid);
+    
+    text-decoration: none; 
+    
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--color-grey-dark);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+}
+
+.desktop {
+    display: block;
+    color: #888;
+    font-size: 0.9em;
+    /* Corrected Margin: Top (0.5rem) | Right/Left (auto) | Bottom (0 - or your desired bottom spacing) */
+    margin: 0.8rem auto 20px;
+    /* Explicitly center all inline content inside this block */
+    text-align: center; 
+}
+
+.desktop a {
+    color: var(--color-grey-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: center; 
+}
+
+
+/* ========================================= */
+/* 2. Header and Navigation (Fixed) */
+/* ========================================= */
+.header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent for minimalist feel */
+    border-bottom: 1px solid var(--color-grey-light);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* Placeholder for round logo image */
+    /* If using text: */
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+}
+
+.nav a {
+    margin-left: 25px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ========================================= */
+/* 3. Main Content Wrapper */
+/* ========================================= */
+.container {
+    padding-top: 80px; /* Space below fixed header */
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* ========================================= */
+/* 4. Footer */
+/* ========================================= */
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--color-grey-light);
+    font-size: 0.8rem;
+    color: var(--color-grey-mid);
+    margin-top: 25px;
+}
+
+/* ========================================= */
+/* 5. Responsive Adjustments */
+/* ========================================= */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+    .nav a {
+        margin-left: 15px;
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .nav a {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+/* ========================================= */
+/* Logo Layout and Styling */
+/* ========================================= */
+
+.logo-link {
+    display: flex; /* Enables Flexbox layout */
+    align-items: center; /* Vertically centers the image and text */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo-img {
+    height: 35px; /* Set the height of the round logo */
+    width: auto;
+    margin-right: 10px; /* Adds space between the logo image and the text */
+}
+
+.logo-text {
+    font-size: 1.5rem; /* Keeps the text size bold */
+    font-weight: 700;
+}
+
+/* Optional: Adjust media queries if needed */
+@media (max-width: 480px) {
+    .logo-img {
+        height: 25px; /* Shrink logo slightly on mobile */
+    }
+    .logo-text {
+        font-size: 1.2rem; /* Shrink text slightly on mobile */
+    }
+}
